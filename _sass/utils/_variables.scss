@@ -1,0 +1,42 @@
+$grid-columns: 12;
+$grid-gutter: 20px;
+$grid-container-max-width: 1296px;
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  nav: 1050px,
+  xl: 1200px
+);
+
+$grid-gutters: (
+  xs: 8px,
+  sm: 16px,
+  md: 24px,
+);
+
+$grid-container-gutters: (
+  xs: 20px,
+  sm: 28px,
+  md: 30px,
+  lg: 68px,
+  xl: 72px
+);
+
+:root {
+  --light: #fbf9f4;
+  --dark: #5a4041;
+  --accent: #ac0f18;
+  --light-alt: #E2BEBE;
+
+  --white: #fff;
+  --black: #000;
+
+  --global-radius: 8px;
+  --global-shadow: 0px 0px 88px 0px rgba(0, 0, 0, 0.1);
+
+  --font-primary: 'Noto serif';
+  --font-secondary: 'Manrope';
+}

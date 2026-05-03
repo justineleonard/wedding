@@ -1,0 +1,43 @@
+.button {
+  display: inline-block;
+  background-color: var(--accent);
+  color: var(--white);
+  padding: 12px 24px;
+  border: none;
+  border-radius: var(--global-radius);
+  font-family: var(--font-secondary);
+  text-decoration: none;
+  position: relative;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transition: background-color 0.2s ease-in, color 0.2s ease-in;
+
+  --width: 6px;
+
+  &:after {
+    content: "";
+    display: block;
+    background: url(../images/tartan.jpeg) no-repeat;
+    background-size: cover;
+    width: calc(100% + var(--width));
+    height: calc(100% + var(--width));
+    position: absolute;
+    top: calc(-0.5 * var(--width));
+    left: calc(-0.5 * var(--width));
+    border-radius: var(--global-radius);
+    transform: translateZ(-1px) scale(0);
+    // opacity: 0;
+    transition: transform 0.4s ease;
+  }
+
+  &:hover,
+  &:focus {
+    // background-color: var(--white);
+    // color: var(--accent);
+
+    &:after {
+      // opacity: 1;
+      transform: translateZ(-1px) scale(1);
+    }
+  }
+}

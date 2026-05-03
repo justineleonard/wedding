@@ -1,0 +1,47 @@
+.divider {
+  --size: 80px;
+  min-height: var(--size);
+  display: block;
+  position: relative;
+}
+
+.divider__line {
+  width: 50%;
+  height: 5px;
+  background: url(../images/tartan.jpeg) repeat-x;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 8px;
+  z-index: 2;
+}
+
+.divider__heart {
+  display: block;
+  width: var(--size);
+  height: var(--size);
+  position: absolute;
+  top: 0;
+  left: 50%;
+  z-index: 4;
+  transform: translateX(-50%);
+  background: url(../images/tartan.jpeg);
+  background-size: contain;
+  mask: url(../images/heart-alt.svg);
+  mask-repeat: no-repeat;
+  mask-size: calc(var(--size) / 2);
+  mask-position: center center;
+}
+
+.divider__heart-bg {
+  display: block;
+  width: var(--size);
+  height: var(--size);
+  background-color: white;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+}

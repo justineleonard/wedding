@@ -1,0 +1,32 @@
+header {
+  background-color: var(--light);
+  padding: 20px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  width: 100%;
+  box-shadow: var(--global-shadow);
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  @include breakpoint(md) {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.logo {
+  font-size: 24px;
+  font-style: italic;
+  margin: 0 auto;
+
+  @include breakpoint(md) {
+    margin: 0;
+  }
+}

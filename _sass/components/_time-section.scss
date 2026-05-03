@@ -1,0 +1,25 @@
+.time-section {
+  display: flex;
+  padding-bottom: 40px;
+  border-bottom: 1px solid var(--light-alt);
+  margin-bottom: 40px;
+
+  &:last-child {
+    margin-bottom: 0;
+    border-bottom: 0;
+  }
+}
+
+.time-section__time {
+  flex: 0 0 130px;
+  color: var(--light-alt);
+  font-size: 24px;
+}
+
+.time-section__content {
+  p {
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

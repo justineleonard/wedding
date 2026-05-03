@@ -1,0 +1,13 @@
+@mixin breakpoint($size, $direction: 'up') {
+  $breakpoint-width: map-get($grid-breakpoints, $size);
+  $media-query: 'min-width';
+
+  @if $direction == 'down' {
+    $media-query: 'max-width';
+    $breakpoint-width: $breakpoint-width - 1;
+  }
+
+  @media ($media-query: $breakpoint-width) {
+    @content;
+  }
+}

@@ -1,0 +1,14 @@
+.page-section {
+  padding: 56px 0px;
+  background-color: var(--light);
+
+  @include breakpoint(md) {
+    padding: 80px 0;
+  }
+}
+
+.page-section--white {
+  background-color: var(--white);
+}
+
+

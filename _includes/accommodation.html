@@ -1,0 +1,32 @@
+{% capture main_content %}
+<div class="row">
+  <div class="col-12">
+    <span class="lead-in">Places to stay</span>
+    <h2>Nearby accommodation</h2>
+    <p>Need a place in the area to stay? Here some codes. Some might be booked out. Some might not. Good luck.</p>
+
+    <div class="accommodation">
+      {% include accommodation-venue.html
+      title="Mercure Hotel"
+      address="77 Racecourse Road, Pakenham VIC 3809"
+      link="https://mercurepakenham.com.au"
+      content="<p>To book, call on 03 5941 1103 or email reservations@mercurepakenham.com.au</p>"
+      code="LHE10"
+      %}
+
+      {% include accommodation-venue.html
+      title="Quest Narre Warren"
+      address="Princes Hwy & Verdun Drive, Narre Warren VIC 3805"
+      link="https://questnarrewarren.com.au/"
+      content="<p>To book, visit the website at questnarrewarren.com.au</p>"
+      code="LHE15"
+      %}
+    </div>
+  </div>
+</div>
+{% endcapture %}
+
+{% include page-section.html
+content=main_content
+slug="accommodation"
+%}

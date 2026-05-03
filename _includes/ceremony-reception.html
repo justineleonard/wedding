@@ -1,0 +1,45 @@
+{% capture main_content %}
+<div class="row">
+  <div class="col-12 col-md-5">
+    <img src="{{ '/assets/images/lhe2.jpeg' | relative_url }}" alt="" class="rounded small-screen-bottom-space" />
+
+    <div class="callout">
+      <p>Content here about kids welcome to ceremony but adults only for reception</p>
+    </div>
+  </div>
+  <div class="col-12 col-md-6 col-md-offset-1">
+    <span class="lead-in">The celebration</span>
+    <h2>Ceremony</h2>
+
+    {% include time-section.html
+    time="4pm"
+    title="Arrival"
+    content="<p>Sed posuere consectetur est at lobortis.</p>"
+    %}
+
+    {% include time-section.html
+    time="4:15pm"
+    title="Ceremony begins"
+    content="<p>Nulla vitae elit libero, a pharetra augue.</p>"
+    %}
+
+    {% include time-section.html
+    time="?:??pm"
+    title="The party starts"
+    content="<p>Cocktail food will be served throughout the evening</p>"
+    %}
+
+    {% include time-section.html
+    time="?:??pm"
+    title="Wrap up"
+    content="<p>The night is over. Thanks for coming. Go home.</p>"
+    %}
+
+  </div>
+</div>
+{% endcapture %}
+
+{% include page-section.html
+content=main_content
+slug="ceremony-reception"
+%}

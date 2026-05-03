@@ -1,0 +1,41 @@
+html {
+  --header-height: 184px;
+
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--header-height);
+
+  @include breakpoint(md) {
+    --header-height: 88px;
+  }
+}
+
+body {
+  padding-top: var(--header-height);
+}
+
+#main {
+  background-color: var(--light);
+}
+
+.rounded {
+  border-radius: var(--global-radius);
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  display: block;
+}
+
+.icon--card {
+  background-image: url(../images/card.svg);
+  margin: 0 auto 16px;
+}
+
+.small-screen-bottom-space {
+  margin-bottom: 24px;
+
+  @include breakpoint(md) {
+    margin-bottom: 0;
+  }
+}

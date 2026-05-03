@@ -1,0 +1,11 @@
+.callout {
+  background-color: var(--white);
+  border-radius: var(--global-radius);
+  box-shadow: var(--global-shadow);
+  padding: 24px;
+  margin-top: 20px;
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+}

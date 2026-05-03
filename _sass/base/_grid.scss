@@ -1,0 +1,98 @@
+@use 'sass:math';
+
+%container-base {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  box-sizing: border-box;
+
+  @each $breakpoint-name in map-keys($grid-container-gutters) {
+    $container-gutter-width: map-get($grid-container-gutters, $breakpoint-name);
+    $breakpoint-width: map-get($grid-breakpoints, $breakpoint-name);
+
+    @media (min-width: $breakpoint-width) {
+      padding-left: $container-gutter-width;
+      padding-right: $container-gutter-width;
+    }
+  }
+}
+
+.container {
+  @extend %container-base;
+  max-width: $grid-container-max-width;
+}
+
+.container-fluid {
+  @extend %container-base;
+}
+
+.row {
+  box-sizing: border-box;
+  font-size: 0;
+
+  > * {
+    font-size: 1rem;
+  }
+
+  @each $breakpoint-name in map-keys($grid-gutters) {
+    $gutter-width: map-get($grid-gutters, $breakpoint-name);
+    $breakpoint-width: map-get($grid-breakpoints, $breakpoint-name);
+
+    @media (min-width: $breakpoint-width) {
+      margin-left: math.div($gutter-width, -2);
+      margin-right: math.div($gutter-width, -2);
+    }
+  }
+}
+
+.row--center {
+  display: flex;
+  justify-content: center;
+}
+
+[class^="col-"],
+[class*=" col-"] {
+  display: inline-block;
+  vertical-align: top;
+  width: 100%;
+  min-height: 1px;
+  box-sizing: border-box;
+
+  @each $breakpoint-name in map-keys($grid-gutters) {
+    $gutter-width: map-get($grid-gutters, $breakpoint-name);
+    $breakpoint-width: map-get($grid-breakpoints, $breakpoint-name);
+
+    @media (min-width: $breakpoint-width) {
+      padding-left: math.div($gutter-width, 2);
+      padding-right: math.div($gutter-width, 2);
+    }
+  }
+}
+
+@for $i from 1 through $grid-columns {
+  .col-#{$i} {
+    width: (math.div(100%, $grid-columns) * $i);
+  }
+  .col-offset-#{$i} {
+    margin-left: (math.div(100%, $grid-columns) * $i);
+  }
+}
+
+@each $breakpoint-name in map-keys($grid-breakpoints) {
+  $breakpoint-width: map-get($grid-breakpoints, $breakpoint-name);
+
+  @media (min-width: $breakpoint-width) {
+    .col-#{$breakpoint-name}-offset-0 {
+      margin-left: 0;
+    }
+
+    @for $i from 1 through $grid-columns {
+      .col-#{$breakpoint-name}-#{$i} {
+        width: (math.div(100%, $grid-columns) * $i);
+      }
+      .col-#{$breakpoint-name}-offset-#{$i} {
+        margin-left: (math.div(100%, $grid-columns) * $i);
+      }
+    }
+  }
+}

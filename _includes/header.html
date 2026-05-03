@@ -1,0 +1,24 @@
+<header>
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+
+        <div class="header">
+          <span class="logo"><span class="accent">❤︎</span> &nbsp; James & Justine</span>
+
+          <nav>
+            <ul class="nav">
+              {% for item in site.data.menu_items %}
+              <li class="nav__item">
+                <a href="#{{ item.slug }}" class="{% if item.is_cta %}button{% else %}nav__link{% endif %}">{{
+                  item.title
+                  }}</a>
+              </li>
+              {% endfor %}
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

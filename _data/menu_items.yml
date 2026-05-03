@@ -1,0 +1,15 @@
+- slug: ceremony-reception
+  title: Ceremony & reception
+  is_cta: false
+- slug: venue
+  title: Venue
+  is_cta: false
+- slug: accommodation
+  title: Accommodation
+  is_cta: false
+- slug: gifts
+  title: Gifts
+  is_cta: false
+- slug: rsvp
+  title: RSVP
+  is_cta: true

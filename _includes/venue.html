@@ -1,0 +1,22 @@
+{% capture main_content %}
+<div class="row">
+  <div class="col-12 col-md-6">
+    <span class="lead-in">Location</span>
+    <h2>Lightning Hill Estate</h2>
+    <p>Dress code things. What footwear? Any other relevant info about venue.</p>
+    <p>130 Whiteside Road, Officer VIC, Australia</p>
+    <p>Access is via the Princes Hwy only.</p>
+  </div>
+
+  <div class="col-12 col-md-6">
+    <iframe width="100%" height="450" style="border:0" loading="lazy" allowfullscreen
+      src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJtz2IJ_kZ1moRAJ7SpH5ab-c&key=AIzaSyBzeVuqmLCNvrOMTQ2bkzk-Tauf9nLfcMA"></iframe>
+  </div>
+</div>
+
+{% endcapture %}
+
+{% include page-section.html
+content=main_content
+slug="venue"
+%}

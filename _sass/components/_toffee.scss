@@ -1,0 +1,33 @@
+footer {
+  position: relative;
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}
+
+.toffee {
+    position: fixed;
+    bottom: -100vw;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    z-index: 9999;
+    transition: bottom 1s ease-in;
+
+    img {
+      max-height: 100vh;
+      margin: 0 auto;
+    }
+}
+
+body.animating {
+  .toffee {
+    bottom: 0;
+    animation: shake 0.2s cubic-bezier(.36,.07,.19,.97) both infinite;
+  }
+}

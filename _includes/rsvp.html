@@ -1,0 +1,73 @@
+{% capture main_content %}
+<div class="row row--center">
+  <div class="col-12 col-md-10">
+
+    <div class="rsvp">
+      <h2 class="accent js-hide-on-message">RSVP</h2>
+      <p class="js-hide-on-message">Tell us if you are coming. Should we include any other form fields here? Please also
+        update
+        help text and
+        labels, or add any extra help text.</p>
+
+      <form class="rsvp__form js-hide-on-message" id="rsvp-form">
+        <div class="form__element">
+          <label for="name" class="required">Your name(s)</label>
+          <input type="text" name="name" id="name" required="required" />
+          <span class="form__description">If responding for multiple people, or you are bringing a plus one, please
+            include everyones info</span>
+        </div>
+
+        <fieldset class="form__element">
+          <legend class="required">Will you be attending?</legend>
+
+          <div class="form__radio-wrapper">
+            <input type="radio" id="attending_yes" name="attending" value="yes" checked="checked" required="required" />
+            <label for="attending_yes">Yes</label>
+          </div>
+
+          <div class="form__radio-wrapper">
+            <input type="radio" id="attending_no" name="attending" value="no" required="required" />
+            <label for="attending_no">No</label>
+          </div>
+        </fieldset>
+
+        <div class="form__element">
+          <label for="dietary">Any dietary requirements?</label>
+          <textarea name="dietary"></textarea>
+        </div>
+
+        <div class="form__element">
+          <label for="songs">Name a song or two that will get you on the dancefloor</label>
+          <textarea name="songs"></textarea>
+        </div>
+
+        <div class="form__element">
+          <label for="notes">Anything else?</label>
+          <textarea name="notes"></textarea>
+        </div>
+
+        <div class="form__element">
+          <input type="submit" class="button" value="Submit" />
+        </div>
+
+      </form>
+
+      <div class="rsvp__loading">
+        <img src="{{ '/assets/images/hearts.svg' | relative_url }}" alt="" />
+        <p>Submitting form...</p>
+      </div>
+
+      <div class="rsvp-thank-you js-show-on-message">
+        <p>Thank you for RSVPing. We look forward to celebrating with you!</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+{% endcapture %}
+
+{% include page-section.html
+content=main_content
+slug="rsvp"
+%}
