@@ -46,7 +46,7 @@ class Toffee {
     let successMessage = '<p>Thank you for RSVPing. We look forward to celebrating with you!</p>';
 
     if(formData.attending === 'no') {
-      successMessage = '<p>We\'re sorry to hear that you won\'t be able to make it. Toffee will now hunt you down.</p>';
+      successMessage = '<p>We\'re sorry to hear that you won\'t be able to make it. Toffee is a little disappointed, but she will live.</p>';
     }
 
     elemsToHide.forEach((elem) => {
