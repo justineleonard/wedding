@@ -21,9 +21,9 @@
 title: James and Justine
 email: toffee@example.com
 description: >- # this means to ignore newlines until "baseurl:"
-  This is our website
+  All about our wedding
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://justineleonard.com" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Build settings
 # theme: minima
