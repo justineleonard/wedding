@@ -5,9 +5,8 @@
     <div class="rsvp">
       <h2 class="accent js-hide-on-message">RSVP</h2>
       <p class="js-hide-on-message">Tell us if you are coming. You may respond on behalf of your +1 or others with an
-        invitation. If
-        responding for multiple people, or you are bringing a plus one, please include everyone's info</p>
-
+        invitation. If responding for multiple people, or you are bringing a plus one, please include everyone's info.</p>
+      <p class="js-hide-on-message">Please RSVP by August 24th.</p>
       <form class="rsvp__form js-hide-on-message" id="rsvp-form">
         <div class="form__element">
           <label for="name" class="required">Your name(s)</label>
@@ -37,6 +36,20 @@
           <label for="songs">Name a song or two that will get you on the dance floor</label>
           <textarea name="songs"></textarea>
         </div>
+
+        <fieldset class="form__element">
+          <legend class="required">We are planning kick on festivities at our house in Cranbourne East. Would you be interested in transport from the venue to our place?</legend>
+
+          <div class="form__radio-wrapper">
+            <input type="radio" id="transport_yes" name="transport" value="yes" checked="checked" required="required" />
+            <label for="transport_yes">Yes</label>
+          </div>
+
+          <div class="form__radio-wrapper">
+            <input type="radio" id="transport_no" name="transport" value="no" required="required" />
+            <label for="transport_no">No</label>
+          </div>
+        </fieldset>
 
         <div class="form__element">
           <label for="notes">Anything else we might need to know?</label>
